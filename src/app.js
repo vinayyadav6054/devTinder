@@ -1,22 +1,22 @@
 const express = require('express');
 const app = express();
 
-//This function is called request handler
-// app.use('/', (req, res) => {
-//     res.send("Hello from the dashbaord!!")
-// })
+//This will only handle Get call to /user
+app.get("/user", (req, res) => {
+    res.send({firstName: "Vinay", lastName:"Yadav"})
+});
 
-//Order of the routes matter
-app.use("/hello/2",(req, res) => {
-    res.send("Hello 22 hello!!")
+app.post("/user", (req, res) => {
+    //Saving database to the database
+    res.send("Data successfully saved to the database")
+    
 })
 
-app.use("/hello",(req, res) => {
-    res.send("Hello hello hello!!")
+app.delete("/user", (req, res)=>{
+    res.send("Delete api")
 })
 
-
-
+//This will match all the HTTP matches API calls to /test
 app.use("/test",(req, res) => {
     res.send("Hello from the server")
 })

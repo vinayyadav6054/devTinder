@@ -16,4 +16,5 @@ What is the use of "-g" while npm install
 -push all code to remote origin
 -Play with routes and rote extensions. / /hello, /hello/2
 -Order of the routes matter alot
-
+-Install Postman app and make a workspace/collections > test API call
+-Write logic to handle GET, POST , PATCH, DELETE API Calls and text them on Postman
