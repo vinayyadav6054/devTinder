@@ -14,3 +14,6 @@ What is the use of "-g" while npm install
 -.gitignore
 -Create a remote repo on github
 -push all code to remote origin
+-Play with routes and rote extensions. / /hello, /hello/2
+-Order of the routes matter alot
+
