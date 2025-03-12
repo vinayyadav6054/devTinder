@@ -18,3 +18,7 @@ What is the use of "-g" while npm install
 -Order of the routes matter alot
 -Install Postman app and make a workspace/collections > test API call
 -Write logic to handle GET, POST , PATCH, DELETE API Calls and text them on Postman
+-Explore routing and use of ?, *, + ,() in the routes
+-Uses of regex in routes /a/, /.*fly$/
+-Reading the query params in the routes
+-Reading the dynamic routes

@@ -1,29 +1,23 @@
 const express = require('express');
 const app = express();
 
+const PORT = 3000;
+
 //This will only handle Get call to /user
-app.get("/user", (req, res) => {
+app.get("/user/:userId/:name/:password", (req, res) => {
+    console.log(req.params);
+    
     res.send({firstName: "Vinay", lastName:"Yadav"})
 });
 
-app.post("/user", (req, res) => {
-    //Saving database to the database
-    res.send("Data successfully saved to the database")
+app.get("/test", (req, res) => {
+    console.log(req.query);
     
-})
-
-app.delete("/user", (req, res)=>{
-    res.send("Delete api")
-})
-
-//This will match all the HTTP matches API calls to /test
-app.use("/test",(req, res) => {
-    res.send("Hello from the server")
-})
-
+    res.send({firstName: "Vinay", lastName:"Yadav"})
+});
 
 //Createa a server which is running on 3000 port
-app.listen(3000, () => {
-    console.log(`Server is successfully listening on port 3000`);
+app.listen(PORT, () => {
+    console.log(`Server is successfully listening on port ${PORT}`);
     
 });
