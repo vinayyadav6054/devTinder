@@ -27,8 +27,9 @@ What is the use of "-g" while npm install
 -next()
 -next function and errors along with res.send()
 -app.use("/route", rH,[rH2, rH3], rH4, rH5)
--What is a Middleware
+-What is a Middleware,Why do we need it ?
 -How express JS basically handles requests behind the scenes
 -Difference app.use and app.all
 -Write a dummy auth middleware for admin
 -Write a dummy auth middleware for all user routes, except /user/login
+-Error Handlig using app.use("/", (err, req, res, next)=> {})
