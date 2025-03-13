@@ -4,7 +4,8 @@ const app = express();
 const PORT = 3000;
 
 //Handle Auth Middleware for all request GET,POSt,PUT,DELETE
-app.get("/admin",(req, res, next) => {
+app.use("/admin",(req, res, next) => {
+    console.log("Admin Auth is getting checked!!!");
     const token = "xyz";
     const isAdminAuthorised  = token === "xyz"
      if(! isAdminAuthorised){
@@ -15,15 +16,14 @@ app.get("/admin",(req, res, next) => {
 ;     }
 })
 
+app.get("/user", (req, res) => {
+    //logic of Check if the request is authorized
+        res.send("Useeer Data Sent");
+});
+
 app.get("/admin/getAllData", (req, res) => {
     //logic of Check if the request is authorized
-    
-    if (isAdminAuthorised){
         res.send("All Data Sent");
-    }
-    else{
-        res.status(401).send("Unauthorized Access");
-    }
 
 })
 
