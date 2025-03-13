@@ -22,6 +22,7 @@ app.get("/getuserData", (req, res) => {
    
 });
 
+//Always write the error handling middleware at the end of all routes
 app.use("/",(err, req, res, next) => {
     if(err){
         //log your error
