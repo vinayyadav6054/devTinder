@@ -33,3 +33,7 @@ What is the use of "-g" while npm install
 -Write a dummy auth middleware for admin
 -Write a dummy auth middleware for all user routes, except /user/login
 -Error Handlig using app.use("/", (err, req, res, next)=> {})
+
+-Create a free cluster on mongodb official website (Mongodb Atlas)
+-Install mongoose library
+-Connect your application to the Database

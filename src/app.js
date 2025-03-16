@@ -1,36 +1,16 @@
 const express = require('express');
+const connectDB = require('./config/database');
 const app = express();
 
 const PORT = 3000;
 
-app.use("/",(err, req, res, next) => {
-    if(err){
-        //log your error
-        res.status(500).send("Something went wrong");
-    }
-});
+connectDB().then(() =>{
+    console.log("Database connnected successfully")
+    app.listen(PORT, () => {
+        console.log(`Server is successfully listening on port ${PORT}`);
+        
+    });
+}).catch(err => {
+    console.log("Error in connecting to DB");
+})
 
-app.get("/getuserData", (req, res) => {
-    try {
-        //Logic of DB call and get user data
-        throw new Error("DB is not connected");
-        res.send("Useeer Data Sent");
-    } catch (error) {
-        res.status(500).send("some error occured ");
-
-    }
-   
-});
-
-//Always write the error handling middleware at the end of all routes
-app.use("/",(err, req, res, next) => {
-    if(err){
-        //log your error
-        res.status(500).send("Something went wrong");
-    }
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is successfully listening on port ${PORT}`);
-    
-});
