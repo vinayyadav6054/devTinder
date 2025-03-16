@@ -36,4 +36,9 @@ What is the use of "-g" while npm install
 
 -Create a free cluster on mongodb official website (Mongodb Atlas)
 -Install mongoose library
--Connect your application to the Database
+-Connect your application to the Database "Connection-url/devTinder"
+Call the connectDB function and connect to database before starting application on 3000
+-Create a userSchema and user Model
+-Create a POST /signup API to add data to database
+-Push some documents using API calls from postman
+-Error Handling using try, catch
