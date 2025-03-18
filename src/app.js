@@ -5,19 +5,16 @@ const User = require('./models/user.model')
 
 const PORT = 3000;
  
+//This middleware now allows us to parse the request body for all the route
+app.use(express.json());
 
 
 app.post('/signup',async (req, res) => {
+    
+    console.log(req.body )
 
     //Creating a new instance of the User model
-    const user = new User({
-        firstName: "Niraj",
-        lastName: "Yadav",
-        emailId: "vinayyadav@gmail.com",
-        password: "Vinay123",
-        age: 23,
-        gender: "Male"
-    });
+    const user = new User(req.body);
 
     try{
         await user.save();
