@@ -45,4 +45,4 @@ Call the connectDB function and connect to database before starting application 
 
 - JS object vs JSON (difference)
 - Add the express.json middleware to your app
-- Make your signup API dynamic to recieve data from the end user
+- Make your signup API dynamic to recieve data from the end user(postman)
